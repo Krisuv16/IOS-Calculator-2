@@ -2,7 +2,7 @@
  File Name: ViewController
  Author: Krisuv Bohara(301274636), Niraj Nepal(301211100)
  Date: 2022-09-21
- Description: Creates the main UI for the Calculator App
+ Description: Creates the main UI of the calculator app and adds all the fuctionality for mathematical calculation
  Version: 1.0
  */
 
@@ -10,13 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var leftOperand : Float = 0.0 //for left operation
-    var rightOperand : Float = 0.0 //for right operation
-    var result : Float = 0.0 //for the last result of the operations
-    var clickedOperator = "" // Operator that is clicked
-    var presentOperator = "" // Operator that is currently in use
-    var resetLabel = true
-    
+    var leftOperand : Float = 0.0 /// Left Operands
+    var rightOperand : Float = 0.0 /// Right Operands
+    var result : Float = 0.0 /// for the last result of the operations
+    var clickedOperator = "" /// Stores the operator that is clicked
+    var activeOperator = "" /// Active Operator
+    var resetLabel = true ///resets input label
     
     @IBOutlet weak var ResultLabel: UILabel! // Result Label to display Numbers and results
     @IBOutlet var viewBorder: [UIView]! //Border
@@ -38,6 +37,8 @@ class ViewController: UIViewController {
         }
     }
     
+    /// Determines the action to be performed on non-operator button pressing
+    /// - Parameter sender: UIButton control that executes the custom code in response to user interaction
     @IBAction func onNonOperatorPressed(_ sender: UIButton) {
         /*
          Switch Case function for Non Number Operator
@@ -48,11 +49,11 @@ class ViewController: UIViewController {
          
         switch sender.titleLabel!.text {
         case "Clear":
-            clearValues()
+            clearValues() /// call clearValues function
         case ".":
-          forDecimalPoint()
+          forDecimalPoint() /// calls forDecimalPoint function
         case "+/-":
-            forPlusMinusOperator()
+            forPlusMinusOperator() // calls forPlusMinusOperator
         default:
             //If the first number is 0 then this will be executed
             if(ResultLabel.text! == "0" || resetLabel){
@@ -67,6 +68,9 @@ class ViewController: UIViewController {
     }
     
     
+    
+    /// Determines the action to be performed on operator pressed
+    /// - Parameter sender: UIButton control that executes the custom code in response to user interaction
     @IBAction func onOperatorPressed(_ sender: UIButton) {
         
         // We used tag because image could not have title and it would be shown to the UI
@@ -109,6 +113,8 @@ class ViewController: UIViewController {
             result = leftOperand * rightOperand
         case "4":
             result = leftOperand / rightOperand
+        case "5":
+            result = leftOperand / 100
         case "10":
             result = leftOperand
         default:
@@ -127,15 +133,15 @@ class ViewController: UIViewController {
         
     }
     
-    //Function that is responsible to remove last element
+    ///  Erases last item
+    /// - Parameter sender:UIButton control that executes the custom code in response to user interaction
     @IBAction func forBackSpace(_ sender: UIButton) {
         if(!ResultLabel.text!.isEmpty){
             ResultLabel.text!.removeLast()
         }
     }
-    
-    
-    //FUnction that deals with decimal point
+
+    /// Function deals with decimal point and helps to concatination of decimal
     func forDecimalPoint(){
         //If the first character is . then it gets concatinated
         if(!ResultLabel.text!.contains("."))
@@ -145,8 +151,8 @@ class ViewController: UIViewController {
             ResultLabel.text! += "0."
         }
     }
-    
-    //Function for Plus minus Operator
+
+    /// Toggle negative and positive float or integer
     func forPlusMinusOperator(){
         if(ResultLabel.text! != "0"){
             if(!ResultLabel.text!.contains("-")){
@@ -157,15 +163,14 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    //Resets the Values
+    /// Function that resets all the operation and values
     func clearValues(){
          ResultLabel.text! = "0"
-         leftOperand = 0.0
-         rightOperand = 0.0
-         result = 0.0
+         leftOperand = 0.0 //for left operation
+         rightOperand = 0.0 //for right operation
+         result = 0.0 //for the last result of the operations
          clickedOperator = ""
-         presentOperator = ""
+         activeOperator = ""
          resetLabel = true
     }
     
