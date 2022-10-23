@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var leftOperand : Float = 0.0 /// Left Operands
-    var rightOperand : Float = 0.0 /// Right Operands
-    var result : Float = 0.0 /// for the last result of the operations
+    var leftOperand : Double = 0.0 /// Left Operands
+    var rightOperand : Double = 0.0 /// Right Operands
+    var result : Double = 0.0 /// for the last result of the operations
     var clickedOperator = "" /// Stores the operator that is clicked
-    var activeOperator = "" /// Active Operator
+    var presentOperator = "" /// Active Operator
     var resetLabel = true ///resets input label
     
     @IBOutlet weak var ResultLabel: UILabel! // Result Label to display Numbers and results
@@ -78,19 +78,23 @@ class ViewController: UIViewController {
         
         if(presentOperator == ""){
             presentOperator = clickedOperator
-            print(presentOperator)
-            resetLabel = true;
+                resetLabel = true;
         }
         
-        if (result != 0.0){return}
+        if (result != 0.0){
+            return
+        }
         
         if(leftOperand != 0.0){
-            rightOperand = Float(ResultLabel.text!)!
+            rightOperand = Double(ResultLabel.text!)!
         }else{
-            leftOperand = Float(ResultLabel.text!)!
+            leftOperand = Double(ResultLabel.text!)!
         }
         
-        if(rightOperand == 0.0 && clickedOperator != "10"){return}
+        if(rightOperand == 0.0 && clickedOperator != "10")
+        {
+            return
+        }
         
         
         //Functional Code
@@ -101,6 +105,13 @@ class ViewController: UIViewController {
          Tag 3 = X,
          Tag 4 = /,
          Tag 5 = %,
+         Tag 6 = Square root
+         Tag 7 = Square
+         Tag 8 = Tan
+         Tag 9 = Sin
+         Tag 11 = Cos
+         Tag 12 = rand
+         Tag 13 = pi
          Tag 10 = "="
          */
         
@@ -115,6 +126,22 @@ class ViewController: UIViewController {
             result = leftOperand / rightOperand
         case "5":
             result = leftOperand / 100
+        case "6":
+            result = sqrt(leftOperand)
+        case "7":
+            result = leftOperand * leftOperand
+        case "8":
+            result = tan(leftOperand)
+        case "9":
+            result = sin(leftOperand)
+            print(result)
+        case "11":
+            result = cos(leftOperand)
+            print(result)
+        case "13":
+            result = leftOperand * 0 + .pi
+        case "12":
+            result = Double.random(in: 0..<1)
         case "10":
             result = leftOperand
         default:
@@ -170,7 +197,7 @@ class ViewController: UIViewController {
          rightOperand = 0.0 //for right operation
          result = 0.0 //for the last result of the operations
          clickedOperator = ""
-         activeOperator = ""
+         presentOperator = ""
          resetLabel = true
     }
     
