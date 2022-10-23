@@ -1120,7 +1120,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="ResultLabel" destination="1zj-PF-lmC" id="cE3-lq-Cov"/>
+                        <outlet property="ResultLabel" destination="Um9-Jq-yg7" id="meW-yb-ORK"/>
                         <outletCollection property="viewBorder" destination="KJw-bj-149" collectionClass="NSMutableArray" id="eM5-UO-tqP"/>
                         <outletCollection property="calBtn" destination="EpJ-fQ-lSN" collectionClass="NSMutableArray" id="YaJ-fR-wa8"/>
                         <outletCollection property="calBtn" destination="BfE-Le-lH7" collectionClass="NSMutableArray" id="KtO-lN-UIc"/>
