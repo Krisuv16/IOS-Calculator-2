@@ -9,4 +9,5 @@ Calculator App UI, Made with Swift
 
 
 ------------------------------------> Landscape Mode <------------------------------------!
-[Simulator Screen Shot - iPhone 14 Pro - 2022-10-23 at 22 33 48](https://user-images.githubusercontent.com/48934328/197437364-8062fac7-729b-446f-98eb-32518d32c21a.png)
+![Simulator Screen Shot - iPhone 14 Pro - 2022-10-23 at 22 34 26](https://user-images.githubusercontent.com/48934328/197437499-6cc17ed1-9c4a-48d4-b094-57e5fffa1816.png)
+
