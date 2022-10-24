@@ -588,18 +588,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GI0-Ig-jHH" userLabel="landscape_label_view">
                                 <rect key="frame" x="483" y="28" width="321" height="85"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um9-Jq-yg7">
-                                        <rect key="frame" x="-10" y="70" width="319" height="56"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um9-Jq-yg7">
+                                        <rect key="frame" x="-200" y="70" width="500" height="56"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Um9-Jq-yg7" firstAttribute="top" secondItem="GI0-Ig-jHH" secondAttribute="top" constant="80" id="2F3-a4-NlB"/>
-                                    <constraint firstAttribute="bottom" secondItem="Um9-Jq-yg7" secondAttribute="bottom" constant="-51" id="9Ff-S6-deH"/>
-                                    <constraint firstItem="Um9-Jq-yg7" firstAttribute="leading" secondItem="GI0-Ig-jHH" secondAttribute="leading" constant="-10" id="FSN-DJ-wwv"/>
-                                    <constraint firstAttribute="trailing" secondItem="Um9-Jq-yg7" secondAttribute="trailing" constant="12" id="S8T-6R-wXS"/>
+                                    <constraint firstItem="Um9-Jq-yg7" firstAttribute="top" secondItem="GI0-Ig-jHH" secondAttribute="top" constant="70" id="2F3-a4-NlB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Um9-Jq-yg7" secondAttribute="bottom" constant="-41" id="9Ff-S6-deH"/>
+                                    <constraint firstItem="Um9-Jq-yg7" firstAttribute="leading" secondItem="GI0-Ig-jHH" secondAttribute="leading" constant="-200" id="FSN-DJ-wwv"/>
+                                    <constraint firstAttribute="trailing" secondItem="Um9-Jq-yg7" secondAttribute="trailing" constant="21" id="S8T-6R-wXS"/>
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <variation key="heightClass=regular-widthClass=compact">
